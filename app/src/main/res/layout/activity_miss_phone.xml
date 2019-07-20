@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_main"
+    tools:context=".MissPhoneActivity">
+
+    <ImageView
+        android:id="@+id/AD_Image"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:src="@drawable/ad"
+        app:layout_constraintBottom_toTopOf="@+id/TextViewMissPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.uncopt.android.widget.text.justify.JustifiedTextView
+        android:id="@+id/TextViewMissPhone"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lineSpacingExtra="7dp"
+        android:text="این صفحه برای آن دسته از افرادی است که گوشی آنها مفقود شده  ولی حساب کاربری آنها هنوز در گوشی مفقود شده فعال است. اما آنها میخواهند با غیر فعال شدن حساب کاربری خود در گوشی مفقود شده با دستگاه دیگری به آن حساب کاربری متصل شوند"
+        android:textAlignment="center"
+        android:textColor="@color/TextColor"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/TextViewMissEnterPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AD_Image" />
+
+    <com.uncopt.android.widget.text.justify.JustifiedTextView
+        android:id="@+id/TextViewMissEnterPhone"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lineSpacingExtra="7dp"
+        android:text="در صورت مطالعه موارد فوق شماره همراه مفقود شده را وارد کرده و روی گزینه تأیید مفقودی گوشی کلیک کنید"
+        android:textAlignment="center"
+        android:textColor="@color/TextColor"
+        android:textSize="14sp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@+id/PhoneNumberMissText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewMissPhone" />
+
+    <EditText
+        android:id="@+id/PhoneNumberMissText"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:background="@drawable/button_bg"
+        android:gravity="center"
+        android:hint="۰۹*********"
+        android:inputType="phone"
+        android:padding="5dp"
+        android:maxLength="11"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#C1FFFFFF"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/SendMissButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewMissEnterPhone" />
+
+
+    <Button
+        android:id="@+id/SendMissButton"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:background="@drawable/green_bg"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingEnd="10dp"
+        android:text="تأیید مفقودی گوشی"
+        android:textAlignment="center"
+        android:singleLine="true"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PhoneNumberMissText" />
+
+
+</android.support.constraint.ConstraintLayout>

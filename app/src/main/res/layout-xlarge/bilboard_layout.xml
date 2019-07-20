@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayoutBillboard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:gravity="center"
+    android:background="@drawable/shadow_white_bg"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ImageBillboard"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="3dp"
+        android:scaleType="fitXY"
+        android:background="@drawable/black_around_black_bg"
+        android:padding="5dp" />
+
+    <LinearLayout
+        android:id="@+id/LinearLayoutBillboardDetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/TextViewTitleBillboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:textColor="@color/TextColor"
+            android:padding="10dp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/TextViewDesBillboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textSize="30sp"
+            android:visibility="visible"
+            android:textStyle="bold"
+            android:textColor="@color/TextColor"
+            android:gravity="top|right"
+            android:padding="10dp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/TextViewLinkBillboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="left|center"
+            android:autoLink="all"
+            android:clickable="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/TextColor"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:focusable="true" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/ImageViewOpen"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:src="@drawable/more"/>
+
+</LinearLayout>
+

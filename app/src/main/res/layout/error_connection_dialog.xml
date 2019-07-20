@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/dialog_question_bg"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:background="@drawable/dialog_unsuccess"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/internet_connection" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/TitleErrorConnectionDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="خــــطا در ارتـــباط !"
+        android:textColor="@color/textColor"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"/>
+
+    <com.uncopt.android.widget.text.justify.JustifiedTextView
+        android:id="@+id/TextErrorConnectionDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="ارتباط با سرور برقرار نمی باشد. لطفا اتصال شبکه خود را بررسی نمایید."
+        android:textAlignment="center"
+        android:textColor="@color/textColor"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+
+</LinearLayout>

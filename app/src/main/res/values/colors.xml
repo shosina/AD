@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2FFDF8</color>
+    <color name="colorPrimaryDark">#0FD74E</color>
+    <color name="colorAccent">#00FD92</color>
+    <color name="Transparent">#00E6E6E6</color>
+    <color name="HintColor">#C1FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="TextColor">#15704C</color>
+    <color name="ad_icon_background">#000000</color>
+    <color name="text_color_category">#000000</color>
+    <color name="text_color_message">#000000</color>
+    <color name="textColor">#292730</color>
+</resources>

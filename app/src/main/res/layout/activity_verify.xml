@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_main"
+    tools:context=".VerifyActivity">
+
+    <ImageView
+        android:id="@+id/AD_Image"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:src="@drawable/ad"
+        app:layout_constraintBottom_toTopOf="@+id/TextViewVerifyTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/TextViewVerifyTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="کد پنج رقمی ارسال شده را وارد کنید"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutPin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AD_Image" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutPin"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:background="@drawable/button_bg"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/TextViewVerifyExplain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewVerifyTitle">
+
+        <com.poovam.pinedittextfield.LinePinField
+            android:id="@+id/PinCode"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:inputType="numberDecimal"
+            android:textColor="#FFFFFF"
+            app:highlightColor="@color/white"
+            android:textStyle="bold"
+            app:highlightEnabled="true"
+            android:textSize="20sp"
+            app:bottomTextPaddingDp="5dp"
+            app:distanceInBetween="10dp"
+            app:fieldColor="#FFFFFF"
+            app:highlightType="allFields"
+            app:isCursorEnabled="true"
+            app:lineThickness="2dp"
+            app:noOfFields="5" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/TextViewVerifyExplain"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="در صورت عدم ارسال روی گزینه زیر کلیک کنید"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:lineSpacingExtra="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/TimerText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutPin" />
+
+    <TextView
+        android:id="@+id/TimerText"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="۳۰ ثانیه"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/SendCodeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewVerifyExplain" />
+
+    <Button
+        android:id="@+id/SendCodeButton"
+        android:layout_width="130dp"
+        android:layout_height="70dp"
+        android:background="@drawable/green_bg"
+        android:gravity="center"
+        android:singleLine="true"
+        android:paddingBottom="10dp"
+        android:paddingEnd="10dp"
+        android:text="تایید کد"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TimerText" />
+
+
+</android.support.constraint.ConstraintLayout>

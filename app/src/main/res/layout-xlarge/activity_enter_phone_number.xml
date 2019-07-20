@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_main"
+    tools:context=".EnterPhoneNumberActivity">
+
+    <ImageView
+        android:id="@+id/AD_Image"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:src="@drawable/ad"
+        app:layout_constraintBottom_toTopOf="@+id/TextViewEnterNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.060000002" />
+
+
+    <TextView
+        android:id="@+id/TextViewEnterNumber"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:lineSpacingExtra="5dp"
+        android:text="جهت ارسال پیامک تأیید شماره موبایل خود را وارد کنید"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/PhoneNumberText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AD_Image" />
+
+    <EditText
+        android:id="@+id/PhoneNumberText"
+        android:layout_width="380dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_bg"
+        android:gravity="center"
+        android:hint="۰۹*********"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#C1FFFFFF"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/SendCodeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewEnterNumber"
+        tools:ignore="TextFields" />
+
+
+    <Button
+        android:id="@+id/SendCodeButton"
+        android:layout_width="380dp"
+        android:layout_height="90dp"
+        android:background="@drawable/green_bg"
+        android:gravity="center"
+        android:paddingBottom="15dp"
+        android:paddingEnd="25dp"
+        android:singleLine="true"
+        android:text="تأیید و ارسال پیامک"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PhoneNumberText" />
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_main"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/AD_Image"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:src="@drawable/ad"
+        app:layout_constraintBottom_toTopOf="@+id/PhoneNumberLoginText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/PhoneNumberLoginText"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:background="@drawable/button_bg"
+        android:gravity="center"
+        android:hint="شماره همراه"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#C1FFFFFF"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/PasswordLoginText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AD_Image" />
+
+
+    <EditText
+        android:id="@+id/PasswordLoginText"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_bg"
+        android:gravity="center"
+        android:hint="رمز عبور"
+        android:inputType="textPassword"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#C1FFFFFF"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/LoginButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PhoneNumberLoginText" />
+
+
+    <Button
+        android:id="@+id/LoginButton"
+        android:layout_width="230dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/green_bg"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingEnd="10dp"
+        android:text="ورود به برنامه"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/CantLoginButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PasswordLoginText" />
+
+    <Button
+        android:id="@+id/CantLoginButton"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/red_bg"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingEnd="10dp"
+        android:text="نمیتوانم وارد شوم"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LoginButton" />
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/dialog_question_bg"
+    android:gravity="center_horizontal">
+
+
+    <TextView
+        android:id="@+id/TitleVideoCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1234"
+        android:textColor="#292730"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:fontFamily="sans-serif"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"/>
+
+    <TextView
+        android:id="@+id/TextViewTimeVideoCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="sans-serif"
+        android:lineSpacingExtra="5dp"
+        android:gravity="center"
+        android:text="۲۰ ثانیه"
+        android:textAlignment="center"
+        android:textColor="#292730"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/EditTextCodeVideo"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:background="@drawable/shadow_white_bg"
+        android:gravity="center"
+        android:hint=" کد را وارد کنید تا امتیاز اعمال شود"
+        android:inputType="number"
+        android:padding="10dp"
+        android:maxLength="4"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:singleLine="true"
+        android:layout_marginBottom="30dp"
+        android:textAlignment="center"
+        android:textColor="@color/TextColor"
+        android:textColorHint="#9C8787"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/OkButtonVideoCode"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="2dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/success"
+        android:background="@drawable/yes_button_bg" />
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="left|center"
+    android:clickable="false"
+    android:descendantFocusability="blocksDescendants"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/TextViewShabaCarditem"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:textColor="#C4000000"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:singleLine="true"
+        android:textAlignment="center"
+        android:layout_marginEnd="25dp"
+        android:text="IR12345------------12345"
+        tools:ignore="RtlHardcoded" />
+
+    <ImageView
+        android:id="@+id/ImageViewShabaCardItem"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:background="@color/Transparent"
+        android:src="@drawable/delete"/>
+
+</LinearLayout>
