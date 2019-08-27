@@ -86,7 +86,7 @@ public class SplashActivity extends AppCompatActivity {
 
         Pushe.initialize(this,true);
 
-        setStatusBarGradiant(SplashActivity.this);
+//        setStatusBarGradiant(SplashActivity.this);
 
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {

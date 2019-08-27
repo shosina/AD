@@ -89,14 +89,14 @@
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <ImageView
+                <com.makeramen.roundedimageview.RoundedImageView
                     android:id="@+id/ImageExplain"
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
                     android:layout_margin="3dp"
                     android:scaleType="fitXY"
-                    android:background="@drawable/black_around_black_bg"
-                    android:padding="5dp" />
+                    app:riv_corner_radius="10dip"
+                    android:background="@drawable/black_around_black_bg" />
 
                 <TextView
                     android:id="@+id/TextViewTitleExplain"
@@ -115,8 +115,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
                     android:gravity="top|right"
+                    android:lineSpacingExtra="7dp"
                     android:padding="10dp"
+                    android:autoLink="web"
                     android:textAlignment="center"
                     android:textColor="@color/TextColor"
                     android:textSize="30sp"
@@ -137,9 +140,11 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/shadow_white_bg"
         android:textStyle="bold"
-        android:elevation="10dp"
         android:gravity="center"
-        android:padding="15dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="20dp"
         android:textColor="@color/TextColor"
         android:text="لینک سایت"
         android:textAlignment="center"
@@ -159,8 +164,10 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="50dp"
         android:background="@drawable/shadow_white_bg"
-        android:elevation="10dp"
-        android:padding="15dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="20dp"
         android:text="دانلود اپ اندروید"
         android:textColor="@color/TextColor"
         android:textSize="25sp"
@@ -180,9 +187,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="5dp"
         android:background="@drawable/shadow_white_bg"
-        android:elevation="10dp"
-        android:gravity="center"
-        android:padding="15dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="20dp"
         android:textColor="@color/TextColor"
         android:textStyle="bold"
         android:text="دانلود اپ ios"
@@ -195,7 +203,7 @@
 
     <ImageView
         android:id="@+id/NextVideoButton"
-        android:layout_width="80dp"
+        android:layout_width="70dp"
         android:layout_height="100dp"
         android:layout_marginTop="8dp"
         android:gravity="left"
@@ -207,7 +215,7 @@
 
     <ImageView
         android:id="@+id/ReplayVideoButton"
-        android:layout_width="80dp"
+        android:layout_width="70dp"
         android:layout_height="100dp"
         android:src="@drawable/again_playe_video"
         android:gravity="right"

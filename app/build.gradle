@@ -11,8 +11,8 @@ android {
         applicationId "com.adcompany.androidapp"
         minSdkVersion 17
         targetSdkVersion 28
-        versionCode 2
-        versionName "1.1"
+        versionCode 3
+        versionName "1.5"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -59,4 +59,5 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.squareup.picasso:picasso:2.5.2'
     implementation 'co.ronash.android:pushe-base:1.6.3'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
 }

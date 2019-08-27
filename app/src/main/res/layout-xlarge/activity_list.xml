@@ -28,7 +28,7 @@
             android:shadowDx="1"
             android:shadowDy="1"
             android:shadowRadius="5"
-            android:text="لیست تبلیغات"
+            android:text="بـیـلبـورد"
             android:textColor="#2FEF6F"
             android:textSize="55sp"
             app:layout_constraintEnd_toEndOf="parent"

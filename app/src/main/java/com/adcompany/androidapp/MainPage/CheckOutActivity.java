@@ -194,9 +194,9 @@ public class CheckOutActivity extends AppCompatActivity {
         TextViewCheackOutExplain.setVisibility(View.VISIBLE);
 
 
-        final Animation SlideOpenMessage= AnimationUtils.loadAnimation(this,R.anim.slide_open_message);
+//        final Animation SlideOpenMessage= AnimationUtils.loadAnimation(this,R.anim.slide_open_message);
         final Animation SlideOpenMessageFirst= AnimationUtils.loadAnimation(this,R.anim.slide_open_message_first);
-        final Animation SlideOpenButton= AnimationUtils.loadAnimation(this,R.anim.slide_open_button);
+//        final Animation SlideOpenButton= AnimationUtils.loadAnimation(this,R.anim.slide_open_button);
         final Animation SlideOpenButtonFirst= AnimationUtils.loadAnimation(this,R.anim.slide_open_button_first);
         final Animation SlideCloseButton= AnimationUtils.loadAnimation(this,R.anim.slide_close_button);
         final Animation SlideCloseButtonFirst= AnimationUtils.loadAnimation(this,R.anim.slide_close_button_first);
@@ -204,9 +204,9 @@ public class CheckOutActivity extends AppCompatActivity {
         final Animation SlideCloseMessageFirst= AnimationUtils.loadAnimation(this,R.anim.slide_close_message_first);
 
 
-        final Animation SlideOpenMoney= AnimationUtils.loadAnimation(this,R.anim.slide_open_money);
+//        final Animation SlideOpenMoney= AnimationUtils.loadAnimation(this,R.anim.slide_open_money);
         final Animation SlideOpenMoneyFirst= AnimationUtils.loadAnimation(this,R.anim.slide_open_money_first);
-        final Animation SlideOpenButtonMoney= AnimationUtils.loadAnimation(this,R.anim.slide_open_button_money);
+//        final Animation SlideOpenButtonMoney= AnimationUtils.loadAnimation(this,R.anim.slide_open_button_money);
         final Animation SlideOpenButtonMoneyFirst= AnimationUtils.loadAnimation(this,R.anim.slide_open_button_money_first);
         final Animation SlideCloseButtonMoney= AnimationUtils.loadAnimation(this,R.anim.slide_close_button_money);
         final Animation SlideCloseButtonMoneyFirst= AnimationUtils.loadAnimation(this,R.anim.slide_close_button_money_first);
@@ -395,18 +395,9 @@ public class CheckOutActivity extends AppCompatActivity {
                             public void run() {
                                 ConstraintMoney.startAnimation(SlideCloseMoneyFirst);
                                 CashButton.startAnimation(SlideCloseButtonMoneyFirst);
-                            }
-                        }, 300);
-                        final Handler handler1 = new Handler();
-                        handler1.postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                ConstraintMoney.startAnimation(SlideOpenMoney);
-                                CashButton.startAnimation(SlideOpenButtonMoney);
                                 CashButton.setEnabled(true);
                             }
-                        }, 600);
-
+                        }, 50);
                     }
                     else
                     {
@@ -440,17 +431,9 @@ public class CheckOutActivity extends AppCompatActivity {
                             public void run() {
                                 LinearMessage.startAnimation(SlideCloseMessageFirst);
                                 MessageButton.startAnimation(SlideCloseButtonFirst);
-                            }
-                        }, 300);
-                        final Handler handler1 = new Handler();
-                        handler1.postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                LinearMessage.startAnimation(SlideOpenMessage);
-                                MessageButton.startAnimation(SlideOpenButton);
                                 MessageButton.setEnabled(true);
                             }
-                        }, 600);
+                        }, 50);
 
                     }
                     else
@@ -461,7 +444,8 @@ public class CheckOutActivity extends AppCompatActivity {
                         MessageButton.startAnimation(SlideCloseButton);
                         MessageButton.setEnabled(true);
                     }
-                }catch (Exception e)
+                }
+                catch (Exception e)
                 {
                     e.printStackTrace();
                 }

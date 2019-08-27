@@ -12,6 +12,7 @@ import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Build;
 import android.os.CountDownTimer;
 import android.support.annotation.RequiresApi;
@@ -92,7 +93,7 @@ public class PlayerVideoActivity extends AppCompatActivity {
 
         final String VIDEO_PATH = VideoActivity.VideoLink;
         MediaController mediaController;
-        videoView.setVideoPath(VIDEO_PATH);
+        videoView.setVideoURI(Uri.parse(VIDEO_PATH));
         mediaController = new MediaController(PlayerVideoActivity.this);
         mediaController.setVisibility(View.GONE);
         mediaController.setAnchorView(videoView);

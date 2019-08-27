@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/LinearLayoutBillboard"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -10,14 +10,14 @@
     android:background="@drawable/shadow_white_bg"
     android:orientation="vertical">
 
-    <ImageView
+    <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/ImageBillboard"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_margin="3dp"
         android:scaleType="fitXY"
-        android:background="@drawable/black_around_black_bg"
-        android:padding="5dp" />
+        app:riv_corner_radius="10dip"
+        android:background="@drawable/black_around_black_bg" />
 
     <LinearLayout
         android:id="@+id/LinearLayoutBillboardDetails"
