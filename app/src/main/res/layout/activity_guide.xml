@@ -62,33 +62,59 @@
 
     </android.support.constraint.ConstraintLayout>
 
-
-    <com.uncopt.android.widget.text.justify.JustifiedTextView
-
-        android:id="@+id/TextViewGuide"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="55dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="15dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/shadow_white_big_bg"
-        android:gravity="top|right"
-        android:lineSpacingExtra="7dp"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        android:paddingTop="5dp"
-        android:paddingBottom="20dp"
-        android:textAlignment="center"
-        android:textColor="@color/TextColor"
-        android:textSize="16sp"
-        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/CashButton"
-        app:layout_constraintTop_toBottomOf="@+id/ConstraintGuide"
-        tools:ignore="RtlHardcoded" />
+        app:layout_constraintTop_toBottomOf="@+id/ConstraintGuide">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.uncopt.android.widget.text.justify.JustifiedTextView
+            android:id="@+id/TextViewGuideTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|right"
+            android:lineSpacingExtra="7dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="5dp"
+            android:textAlignment="center"
+            android:textColor="#e34c5e"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:ignore="RtlHardcoded" />
+
+        <com.uncopt.android.widget.text.justify.JustifiedTextView
+            android:id="@+id/TextViewGuide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|right"
+            android:lineSpacingExtra="7dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="20dp"
+            android:textAlignment="center"
+            android:textColor="@color/TextColor"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:ignore="RtlHardcoded" />
+
+
+    </LinearLayout>
+
+    </ScrollView>
 
 
     <android.support.design.widget.BottomNavigationView
@@ -194,7 +220,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/LinearMessage"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.60"/>
 
 
     <LinearLayout

@@ -11,8 +11,8 @@ android {
         applicationId "com.adcompany.androidapp"
         minSdkVersion 17
         targetSdkVersion 28
-        versionCode 3
-        versionName "1.5"
+        versionCode 4
+        versionName "1.6"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

@@ -12,7 +12,10 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -73,11 +76,13 @@ public class ProfileActivity extends AppCompatActivity {
 
     TextView TextViewSpinnerState;
     TextView TextViewSpinnerCity;
+    TextView TextViewState;
     public TextView TextViewPassword;
 
     String StateId;
     String CityId;
 
+    boolean SmallHint;
 
    List<ListSpinner> ListSpinnerState=new ArrayList<>();
    List<ListSpinner> ListSpinnerCity=new ArrayList<>();
@@ -107,6 +112,7 @@ public class ProfileActivity extends AppCompatActivity {
         TextViewSpinnerState=(TextView) findViewById(R.id.TextViewSpinnerState);
         TextViewSpinnerCity=(TextView) findViewById(R.id.TextViewSpinnerCity);
         TextViewPassword=(TextView) findViewById(R.id.TextViewPassword);
+        TextViewState=(TextView) findViewById(R.id.TextViewState);
 
 
         font_Medium= Typeface.createFromAsset(ProfileActivity.context.getAssets(),"fonts/BHoma.ttf");
@@ -121,6 +127,7 @@ public class ProfileActivity extends AppCompatActivity {
         TextViewSpinnerState.setTypeface(font_Bold);
         TextViewSpinnerCity.setTypeface(font_Bold);
         FriendCode.setTypeface(font_Bold);
+        TextViewState.setTypeface(font_Bold);
 
         CompleteProfile = getIntent().getBooleanExtra("CompleteProfile",false);
 
@@ -256,30 +263,37 @@ public class ProfileActivity extends AppCompatActivity {
                 }
             }).start();
         }
+        float TextSize = FriendCode.getTextSize()/getResources().getDisplayMetrics().scaledDensity;
+        if (TextSize<=18)
+            SmallHint=true;
+        else
+            SmallHint=false;
 
+        Log.d("looog", String.valueOf(TextSize));
 
-        FriendCode.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("ResourceAsColor")
+        FriendCode.addTextChangedListener(new TextWatcher() {
             @Override
-            public void onClick(View v) {
-                FriendCode.setHint("کد معرفی");
-                FriendCode.setHintTextColor(R.color.HintColor);
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
             }
-        });
 
-        FriendCode.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @SuppressLint("ResourceAsColor")
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (hasFocus) {
-                    FriendCode.setHintTextColor(Color.parseColor("#C1FFFFFF"));
-                    FriendCode.setHint("کد معرفی");
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(FriendCode.length() == 0) {
+                    if (SmallHint)
+                        FriendCode.setTextSize(TypedValue.COMPLEX_UNIT_SP,14);
+                    else
+                        FriendCode.setTextSize(TypedValue.COMPLEX_UNIT_SP,24);
+                } else {
+                    if (SmallHint)
+                        FriendCode.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
+                    else
+                        FriendCode.setTextSize(TypedValue.COMPLEX_UNIT_SP,40);
                 }
-                else
-                {
-                    FriendCode.setHintTextColor(Color.WHITE);
-                    FriendCode.setHint("از طریق دوستام دعوت شده ام");
-                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
 
             }
         });

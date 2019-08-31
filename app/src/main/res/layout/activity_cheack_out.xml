@@ -67,7 +67,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
         android:gravity="center"
         android:text="مدیریت شماره های شبا"
@@ -78,7 +77,8 @@
         app:layout_constraintBottom_toTopOf="@+id/ListViewShabaCard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ConstraintCheackOut" />
+        app:layout_constraintTop_toBottomOf="@+id/ConstraintCheackOut"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ListView
         android:id="@+id/ListViewShabaCard"
@@ -354,7 +354,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/LinearMessage"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.60"/>
 
     <LinearLayout
         android:id="@+id/LinearMessage"
@@ -377,7 +378,7 @@
 
         <TextView
             android:id="@+id/TextViewTitleMessage"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:gravity="center"

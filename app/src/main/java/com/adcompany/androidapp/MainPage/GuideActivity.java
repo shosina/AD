@@ -71,6 +71,7 @@ public class GuideActivity extends AppCompatActivity {
     TextView TextViewMoneyEnglish;
     TextView TextViewTitleMessage;
     TextView TextViewTextMessage;
+    TextView TextViewGuideTitle;
 
     ConstraintLayout ConstraintMoney;
     LinearLayout LinearMessage;
@@ -115,6 +116,7 @@ public class GuideActivity extends AppCompatActivity {
         TextViewMoneyEnglish=(TextView)findViewById(R.id.TextViewMoneyEnglish);
         TextViewTitleMessage=(TextView)findViewById(R.id.TextViewTitleMessage);
         TextViewTextMessage=(TextView)findViewById(R.id.TextViewTextMessage);
+        TextViewGuideTitle=(TextView)findViewById(R.id.TextViewGuideTitle);
         LinearMessage=(LinearLayout) findViewById(R.id.LinearMessage);
         ConstraintMoney=(ConstraintLayout) findViewById(R.id.ConstraintMoney);
         bottomNavigationView=(BottomNavigationView)findViewById(R.id.bottom_navigation_view);
@@ -124,7 +126,9 @@ public class GuideActivity extends AppCompatActivity {
         ImageViewAccount=(ImageView)findViewById(R.id.ImageViewAccount);
         bottomNavigationView.setSelectedItemId(R.id.navigation_guide);
 
-        String text="برای اینکه راحت با برنامه کار کنید و درآمد کسب کنید حتما توضیحات را بخوانید."+"\n"+"۱. برای کسب درآمد با استفاده از نوار پایین صفحه به صفحه پخش ویدیو بروید، دکمه پخش ویدیو را بزنید و تا انتهای پخش ویدیو صبر کنید."+"\n"+"۲. ما هر روز کلی ویدیو جدید تو برنامه میذاریم که وقتی به تعداد معینی از بازدید می رسند حذف می شوند."+"\n"+"۳. پس از پایان پخش ویدیو برای کسب درآمد، کد نمایش داده شده را به طور دقیق با حروف کوچک وارد کنید. واضح است که از هر کد تنها یکبار میتوانید کسب درآمد کنید پس در صورت نمایش مجدد همان کد، دکمه بازگشت را بزنید."+"\n"+"۴. برای دریافت درآمدتان با استفاده از نوار پایین صفحه به بخش تسویه حساب بروید و شماره شبا خود را وارد کنید."+"\n"+"۵. هنگام وارد کردن شماره شبا IR اول شماره شبا را وارد نکنید و فقط اعداد شماره شبا را به ترتیب وارد کنید."+"\n"+"۶. برای دریافت شماره شبا میتوانید به سایت بانک خود مراجعه کنید."+"\n";
+        String text="برای اینکه راحت با برنامه کار کنید و درآمد کسب کنید حتما توضیحات را بخوانید.";
+        TextViewGuideTitle.setText(text);
+        text="۱. برای کسب درآمد با استفاده از نوار پایین صفحه به صفحه پخش ویدیو بروید، دکمه پخش ویدیو را بزنید و تا انتهای پخش ویدیو صبر کنید."+"\n"+"۲. ما هر روز کلی ویدیو جدید تو برنامه میذاریم که وقتی به تعداد معینی از بازدید می رسند حذف می شوند."+"\n"+"۳. برای دریافت درآمدتان با استفاده از نوار پایین صفحه به بخش تسویه حساب بروید و شماره شبا خود را وارد کنید."+"\n"+"۴. برای دریافت شماره شبا میتوانید به سایت بانک خود مراجعه کنید."+"\n"+"۵. برای دیدن موجودی خود روی دستگیره موجودی در کنار صفحه کلیک کنید."+"\n"+"۶. با استفاده از نوار پایین صفحه به بخش بیلبورد بروید. در آنجا می توانید لیست شرکت های مختلف در زمینه های مختلف را مشاهده کنید و محصول خود را با مقایسه بین آن ها خریداری کنید.";
         TextViewGuide.setText(text);
 
         HeaderGuide.setTypeface(font_Extra_Bold);
@@ -134,6 +138,7 @@ public class GuideActivity extends AppCompatActivity {
         TextViewMoneyFarsi.setTypeface(font_Bold);
         TextViewTitleMessage.setTypeface(font_Bold);
         TextViewTextMessage.setTypeface(font_Bold);
+        TextViewGuideTitle.setTypeface(font_Bold);
 //        TextViewMoneyEnglish.setTypeface(font_Bold);
 
         Pushe.initialize(this,true);

@@ -67,6 +67,20 @@
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
+
+            <TextView
+                android:id="@+id/TextViewState"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/TextColor"
+                android:text="در انتخاب نام استان و شهر خود دقت فرمایید تا از مزایای شهر خود برخوردار شوید"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
             <LinearLayout
                 android:id="@+id/linearLayout5"
                 android:layout_width="220dp"
@@ -183,18 +197,19 @@
 
             <EditText
                 android:id="@+id/FriendCode"
-                android:layout_width="220dp"
+                android:layout_width="320dp"
                 android:layout_height="60dp"
                 android:layout_marginBottom="50dp"
                 android:background="@drawable/button_bg"
                 android:gravity="center"
-                android:hint="از طریق دوستان دعوت شده ام"
+                android:maxLength="10"
+                android:hint="کد دعوت در صورتی که از طریق دوستان دعوت شده اید"
                 android:inputType="number"
                 android:singleLine="true"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF"
-                android:textSize="18sp"
+                android:textColorHint="#C1FFFFFF"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
 
