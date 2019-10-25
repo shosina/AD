@@ -18,6 +18,7 @@ import android.support.constraint.ConstraintLayout;
 import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.content.LocalBroadcastManager;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Spannable;
@@ -88,6 +89,7 @@ public class ListActivity extends AppCompatActivity {
     public LinearLayout LinearLayoutBillboard;
 
     public HorizontalScrollView ScrollCategory;
+    public SwipeRefreshLayout RefreshScrollViewList;
 
     Button CashButton;
     Button MessageButton;
@@ -135,6 +137,7 @@ public class ListActivity extends AppCompatActivity {
         ImageViewBack=(ImageView) findViewById(R.id.ImageViewBack);
         ImageViewMore=(ImageView) findViewById(R.id.ImageViewMore);
         ScrollCategory=(HorizontalScrollView)findViewById(R.id.ScrollCategory);
+        RefreshScrollViewList=(SwipeRefreshLayout)findViewById(R.id.RefreshScrollViewList);
 
         font_Medium= Typeface.createFromAsset(ListActivity.context.getAssets(),"fonts/BHoma.ttf");
         font_Bold=Typeface.createFromAsset(ListActivity.context.getAssets(),"fonts/BHoma-Bold.ttf");
@@ -233,6 +236,7 @@ public class ListActivity extends AppCompatActivity {
                 return false;
             }
         });
+
 
         ImageViewMore.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -499,8 +503,11 @@ public class ListActivity extends AppCompatActivity {
                                                             }
                                                         });
                                                         LinearLayoutCategory.addView(textView);
-
-
+                                                        ScrollCategory.postDelayed(new Runnable() {
+                                                            public void run() {
+                                                                ScrollCategory.fullScroll(HorizontalScrollView.FOCUS_RIGHT);
+                                                            }
+                                                        }, 100L);
                                                         textView.callOnClick();
 
                                                     }
@@ -544,6 +551,15 @@ public class ListActivity extends AppCompatActivity {
                 }
             }
         }).start();
+        RefreshScrollViewList.setColorSchemeColors(Color.parseColor("#00FD92"));
+        RefreshScrollViewList.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                startActivity(new Intent(getBaseContext(), ListActivity.class));
+                overridePendingTransition(0, 0);
+                IsExit = false;
+            }
+        });
 
 
         ImageViewAccount.setOnClickListener(new View.OnClickListener() {

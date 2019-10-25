@@ -1354,7 +1354,7 @@ public class ExplainVideoActivity extends AppCompatActivity {
                                                             try {
                                                                 int money = Integer.parseInt(TextViewMoneyEnglish.getText().toString());
                                                                 ValueAnimator animator = ValueAnimator.ofInt(money, user_score);
-                                                                animator.setDuration(5000); //Duration is in milliseconds
+                                                                animator.setDuration(2000); //Duration is in milliseconds
                                                                 animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                                                                     public void onAnimationUpdate(ValueAnimator animation) {
                                                                         TextViewMoneyEnglish.setText(animation.getAnimatedValue().toString());
@@ -1388,7 +1388,7 @@ public class ExplainVideoActivity extends AppCompatActivity {
                                                                                     e.printStackTrace();
                                                                                 }
                                                                             }
-                                                                        },2000);
+                                                                        },1000);
                                                                     }
                                                                 });
                                                                 animator.start();

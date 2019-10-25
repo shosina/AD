@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="300dp"
+    android:layout_width="330dp"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
     android:background="@drawable/dialog_question_bg"
@@ -26,11 +26,11 @@
         android:id="@+id/TitleErrorConnectionDialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="خــــطا در ارتـــباط !"
+        android:text="اتصال دستگاه به اینترنت را بررسی کنید"
         android:textColor="@color/textColor"
         android:textAlignment="center"
         android:gravity="center"
-        android:textSize="18sp"
+        android:textSize="17sp"
         android:textStyle="bold"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="10dp"/>
