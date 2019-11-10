@@ -295,7 +295,7 @@ public class VerifyActivity extends AppCompatActivity {
                                                             try {
                                                                 Toast.makeText(VerifyActivity.this, error, Toast.LENGTH_LONG).show();
                                                             } catch (Exception e) {
-                                                                Toast.makeText(VerifyActivity.this, "مشکل در سرور لطفا دوباره امتحان کنید", Toast.LENGTH_LONG).show();
+                                                                Toast.makeText(VerifyActivity.this, "لطفا مجددا تلاش کنید ، در صورت مشاهده مجدد این پیام مشکل در سرور به وجود آمده است.", Toast.LENGTH_LONG).show();
                                                             }
                                                         }
                                                     });
@@ -429,7 +429,7 @@ public class VerifyActivity extends AppCompatActivity {
                                                             try {
                                                                 Toast.makeText(VerifyActivity.this, error, Toast.LENGTH_LONG).show();
                                                             } catch (Exception e) {
-                                                                Toast.makeText(VerifyActivity.this, "مشکل در سرور لطفا دوباره امتحان کنید", Toast.LENGTH_LONG).show();
+                                                                Toast.makeText(VerifyActivity.this, "لطفا مجددا تلاش کنید ، در صورت مشاهده مجدد این پیام مشکل در سرور به وجود آمده است.", Toast.LENGTH_LONG).show();
                                                             }
                                                         }
                                                     });
@@ -550,7 +550,7 @@ public class VerifyActivity extends AppCompatActivity {
                                                         public void run() {
                                                             if (loading.isShowing())
                                                                 loading.dismiss();
-                                                            Toast.makeText(VerifyActivity.this, "مشکل در سرور لطفا دوباره امتحان کنید", Toast.LENGTH_LONG).show();
+                                                            Toast.makeText(VerifyActivity.this, "لطفا مجددا تلاش کنید ، در صورت مشاهده مجدد این پیام مشکل در سرور به وجود آمده است.", Toast.LENGTH_LONG).show();
                                                         }
                                                     });
                                                 }catch (Exception e)
@@ -1044,7 +1044,7 @@ public class VerifyActivity extends AppCompatActivity {
 
     public void StartTimer ()
     {
-        timeLeftInMiliseconds=60000;
+        timeLeftInMiliseconds=15000;
         countDownTimer = new CountDownTimer(timeLeftInMiliseconds,1000) {
             @SuppressLint("SetTextI18n")
             @Override

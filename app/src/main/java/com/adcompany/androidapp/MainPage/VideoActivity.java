@@ -577,7 +577,7 @@ public class VideoActivity extends AppCompatActivity {
                                                                     {
                                                                         e.printStackTrace();
                                                                     }
-                                                                    Toast.makeText(VideoActivity.this, "ویدیو وجود ندارد", Toast.LENGTH_SHORT).show();
+                                                                    Toast.makeText(VideoActivity.this, "لطفا مجددا تلاش کنید ، در صورت مشاهده مجدد این پیام فعلا ویدیوها تمام شده است.", Toast.LENGTH_LONG).show();
                                                                 }
 
                                                             } catch (Exception e) {
@@ -602,7 +602,7 @@ public class VideoActivity extends AppCompatActivity {
                                                         {
                                                             e.printStackTrace();
                                                         }
-                                                        Toast.makeText(VideoActivity.this, "مشکل در سرور", Toast.LENGTH_SHORT).show();
+                                                        Toast.makeText(VideoActivity.this, "لطفا مجددا تلاش کنید ، در صورت مشاهده مجدد این پیام مشکل در سرور به وجود آمده است.", Toast.LENGTH_LONG).show();
                                                     }
                                                 });
                                             }
@@ -768,7 +768,7 @@ public class VideoActivity extends AppCompatActivity {
                                                                 }
                                                                 else if (result==-1)
                                                                 {
-                                                                    Toast.makeText(VideoActivity.this, "ویدیو وجود ندارد", Toast.LENGTH_SHORT).show();
+                                                                    Toast.makeText(VideoActivity.this, "لطفا مجددا تلاش کنید ، در صورت مشاهده مجدد این پیام فعلا ویدیوها تمام شده است.", Toast.LENGTH_LONG).show();
                                                                 }
 
                                                             } catch (Exception e) {
@@ -793,7 +793,7 @@ public class VideoActivity extends AppCompatActivity {
                                                         {
                                                             e.printStackTrace();
                                                         }
-                                                        Toast.makeText(VideoActivity.this, "مشکل در سرور", Toast.LENGTH_SHORT).show();
+                                                        Toast.makeText(VideoActivity.this, "لطفا مجددا تلاش کنید ، در صورت مشاهده مجدد این پیام مشکل در سرور به وجود آمده است.", Toast.LENGTH_LONG).show();
                                                     }
                                                 });
                                             }
@@ -965,7 +965,7 @@ public class VideoActivity extends AppCompatActivity {
                                                                 }
                                                                 else if (result==-1)
                                                                 {
-                                                                    Toast.makeText(VideoActivity.this, "ویدیو وجود ندارد", Toast.LENGTH_SHORT).show();
+                                                                    Toast.makeText(VideoActivity.this, "لطفا مجددا تلاش کنید ، در صورت مشاهده مجدد این پیام فعلا ویدیوها تمام شده است.", Toast.LENGTH_LONG).show();
                                                                 }
 
                                                             } catch (Exception e) {
@@ -990,7 +990,7 @@ public class VideoActivity extends AppCompatActivity {
                                                         {
                                                             e.printStackTrace();
                                                         }
-                                                        Toast.makeText(VideoActivity.this, "مشکل در سرور", Toast.LENGTH_SHORT).show();
+                                                        Toast.makeText(VideoActivity.this, "لطفا مجددا تلاش کنید ، در صورت مشاهده مجدد این پیام مشکل در سرور به وجود آمده است.", Toast.LENGTH_LONG).show();
                                                     }
                                                 });
                                             }

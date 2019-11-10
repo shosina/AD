@@ -335,7 +335,7 @@ public class AdvertisingActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 try {
-                    String url= "https://instagram.com/adcompanyir";
+                    String url= "https://instagram.com/Adcompany.ir";
                     Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                     browserIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                     startActivityIfNeeded(browserIntent,0);

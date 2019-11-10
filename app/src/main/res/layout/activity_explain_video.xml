@@ -218,6 +218,21 @@
         app:layout_constraintTop_toBottomOf="@+id/MessageButton"
         app:layout_constraintVertical_bias="0.75" />
 
+    <TextView
+        android:id="@+id/TextViewNextVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="ویدیو بعدی"
+        android:textAlignment="center"
+        android:textColor="@color/TextColor"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NextVideoButton"
+        app:layout_constraintVertical_bias="0.100000024" />
+
     <ImageView
         android:id="@+id/ReplayVideoButton"
         android:layout_width="45dp"
@@ -228,6 +243,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/NextVideoButton"
         tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/TextViewReplayVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:text="تکـرار مجـدد"
+        android:textAlignment="center"
+        android:textColor="@color/TextColor"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ReplayVideoButton"
+        app:layout_constraintVertical_bias="0.100000024" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottom_navigation_view"

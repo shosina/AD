@@ -820,19 +820,19 @@ public class ListActivity extends AppCompatActivity {
                                                                                                                         if (data!=null)
                                                                                                                         {
                                                                                                                             String title=data.getJSONObject(0).getString("title");
-                                                                                                                            String phone=data.getJSONObject(0).getString("phone");
+//                                                                                                                            String phone=data.getJSONObject(0).getString("phone");
                                                                                                                             String link=data.getJSONObject(0).getString("link");
                                                                                                                             String description=data.getJSONObject(0).getString("description");
 
                                                                                                                             LinearLayoutBillboardDetails.setVisibility(View.VISIBLE);
                                                                                                                             ImageViewOpen.setImageResource(R.drawable.up);
 
-                                                                                                                            try {
-                                                                                                                                LoadImageFromUrl(phone,ImageBillboard);
-                                                                                                                            }catch (Exception e)
-                                                                                                                            {
-                                                                                                                                e.printStackTrace();
-                                                                                                                            }
+//                                                                                                                            try {
+//                                                                                                                                LoadImageFromUrl(phone,ImageBillboard);
+//                                                                                                                            }catch (Exception e)
+//                                                                                                                            {
+//                                                                                                                                e.printStackTrace();
+//                                                                                                                            }
 
                                                                                                                             try {
                                                                                                                                 TextViewTitleBillboard.setText(title);
