@@ -202,7 +202,7 @@ public class AdapterShabaList extends BaseAdapter {
                                     {
                                         el.printStackTrace();
                                     }
-                                    Toast.makeText(context, "اتصال با مشکل مواجه شد.", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(context, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
 
                                 }catch (Exception el)
                                 {

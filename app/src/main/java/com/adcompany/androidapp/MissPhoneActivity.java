@@ -173,7 +173,7 @@ public class MissPhoneActivity extends AppCompatActivity {
                                                     }catch (Exception e){
                                                         e.printStackTrace();
                                                     }
-                                                    Toast.makeText(MissPhoneActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_LONG).show();
+                                                    Toast.makeText(MissPhoneActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                                 }
                                             });
                                         }

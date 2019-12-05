@@ -202,7 +202,7 @@ public class LoginActivity extends AppCompatActivity {
                                                 public void run() {
                                                     if (loading.isShowing())
                                                         loading.dismiss();
-                                                    Toast.makeText(LoginActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_LONG).show();
+                                                    Toast.makeText(LoginActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                                 }
                                             });
 
@@ -272,7 +272,7 @@ public class LoginActivity extends AppCompatActivity {
                                                                                             public void run() {
                                                                                                 if (loading.isShowing())
                                                                                                     loading.dismiss();
-                                                                                                Toast.makeText(LoginActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_LONG).show();
+                                                                                                Toast.makeText(LoginActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                                                                             }
                                                                                         });
                                                                                     }

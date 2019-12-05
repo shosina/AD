@@ -13,6 +13,7 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -88,9 +89,13 @@ public class VideoActivity extends AppCompatActivity {
     TextView TextViewTitleMessage;
     TextView TextViewTextMessage;
     TextView TextViewVideoExplain;
+    TextView TextViewVideoExplainPlay;
+    TextView TextViewVideoExplainFollow;
+    TextView TextViewInstaClick;
 
     ConstraintLayout ConstraintMoney;
     LinearLayout LinearMessage;
+    LinearLayout LinearLayoutInstaClick;
 
     Typeface font_Medium;
     Typeface font_Bold;
@@ -165,7 +170,11 @@ public class VideoActivity extends AppCompatActivity {
         TextViewTitleMessage=(TextView)findViewById(R.id.TextViewTitleMessage);
         TextViewTextMessage=(TextView)findViewById(R.id.TextViewTextMessage);
         TextViewVideoExplain=(TextView)findViewById(R.id.TextViewVideoExplain);
+        TextViewVideoExplainPlay=(TextView)findViewById(R.id.TextViewVideoExplainPlay);
+        TextViewVideoExplainFollow=(TextView)findViewById(R.id.TextViewVideoExplainFollow);
+        TextViewInstaClick=(TextView)findViewById(R.id.TextViewInstaClick);
         LinearMessage=(LinearLayout) findViewById(R.id.LinearMessage);
+        LinearLayoutInstaClick=(LinearLayout) findViewById(R.id.LinearLayoutInstaClick);
         ConstraintMoney=(ConstraintLayout) findViewById(R.id.ConstraintMoney);
         PlayeVideoImage=(ImageView) findViewById(R.id.PlayeVideoImage);
         ImageViewAccount=(ImageView) findViewById(R.id.ImageViewAccount);
@@ -189,6 +198,9 @@ public class VideoActivity extends AppCompatActivity {
         TextViewTitleMessage.setTypeface(font_Bold);
         TextViewTextMessage.setTypeface(font_Bold);
         TextViewVideoExplain.setTypeface(font_Bold);
+        TextViewVideoExplainPlay.setTypeface(font_Bold);
+        TextViewVideoExplainFollow.setTypeface(font_Bold);
+        TextViewInstaClick.setTypeface(font_Bold);
 //        TextViewMoneyEnglish.setTypeface(font_Medium);
 
         Pushe.initialize(this,true);
@@ -238,7 +250,7 @@ public class VideoActivity extends AppCompatActivity {
         final Animation SlideCloseMoneyFirst= AnimationUtils.loadAnimation(this,R.anim.slide_close_money_first);
 
         BottomNavigationMenuView bottomNavigationMenuView = (BottomNavigationMenuView) bottomNavigationView.getChildAt(0);
-        View view = bottomNavigationMenuView.getChildAt(2);
+        View view = bottomNavigationMenuView.getChildAt(1);
 
         view.setBackgroundResource(R.drawable.video_bg);
 
@@ -259,13 +271,13 @@ public class VideoActivity extends AppCompatActivity {
                     IsExit=false;
                     finish();
                 }
-                if (menuItem.getItemId()==R.id.navigation_check_out)
-                {
-                    startActivity(new Intent(getBaseContext(), CheckOutActivity.class));
-                    overridePendingTransition(0, 0);
-                    IsExit=false;
-                    finish();
-                }
+//                if (menuItem.getItemId()==R.id.navigation_check_out)
+//                {
+//                    startActivity(new Intent(getBaseContext(), CheckOutActivity.class));
+//                    overridePendingTransition(0, 0);
+//                    IsExit=false;
+//                    finish();
+//                }
                 if (menuItem.getItemId()==R.id.navigation_list)
                 {
                     Intent intent=new Intent(VideoActivity.this,ListActivity.class);
@@ -353,6 +365,28 @@ public class VideoActivity extends AppCompatActivity {
                     }
                 }
                 catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        LinearLayoutInstaClick.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    final Animation Click = AnimationUtils.loadAnimation(VideoActivity.this,R.anim.click);
+                    v.startAnimation(Click);
+                }catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
+                try {
+                    String url= "https://instagram.com/Adcompany.ir";
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                    browserIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                    startActivityIfNeeded(browserIntent,0);
+                }catch (Exception e)
                 {
                     e.printStackTrace();
                 }
@@ -511,7 +545,7 @@ public class VideoActivity extends AppCompatActivity {
                                                 {
                                                     e.printStackTrace();
                                                 }
-                                                Toast.makeText(VideoActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(VideoActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_SHORT).show();
                                             }
                                         });
                                     }
@@ -577,7 +611,7 @@ public class VideoActivity extends AppCompatActivity {
                                                                     {
                                                                         e.printStackTrace();
                                                                     }
-                                                                    Toast.makeText(VideoActivity.this, "لطفا مجددا تلاش کنید ، در صورت مشاهده مجدد این پیام فعلا ویدیوها تمام شده است.", Toast.LENGTH_LONG).show();
+                                                                    Toast.makeText(VideoActivity.this, "خطا در ویدیو ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                                                 }
 
                                                             } catch (Exception e) {
@@ -602,7 +636,7 @@ public class VideoActivity extends AppCompatActivity {
                                                         {
                                                             e.printStackTrace();
                                                         }
-                                                        Toast.makeText(VideoActivity.this, "لطفا مجددا تلاش کنید ، در صورت مشاهده مجدد این پیام مشکل در سرور به وجود آمده است.", Toast.LENGTH_LONG).show();
+                                                        Toast.makeText(VideoActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                                     }
                                                 });
                                             }
@@ -619,7 +653,7 @@ public class VideoActivity extends AppCompatActivity {
                                                         {
                                                             e.printStackTrace();
                                                         }
-                                                        Toast.makeText(VideoActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_SHORT).show();
+                                                        Toast.makeText(VideoActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_SHORT).show();
                                                     }
                                                 });
                                             }catch (Exception e)
@@ -709,7 +743,7 @@ public class VideoActivity extends AppCompatActivity {
                                                 {
                                                     e.printStackTrace();
                                                 }
-                                                Toast.makeText(VideoActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(VideoActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_SHORT).show();
                                             }
                                         });
                                     }
@@ -768,7 +802,7 @@ public class VideoActivity extends AppCompatActivity {
                                                                 }
                                                                 else if (result==-1)
                                                                 {
-                                                                    Toast.makeText(VideoActivity.this, "لطفا مجددا تلاش کنید ، در صورت مشاهده مجدد این پیام فعلا ویدیوها تمام شده است.", Toast.LENGTH_LONG).show();
+                                                                    Toast.makeText(VideoActivity.this, "خطا در ویدیو ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                                                 }
 
                                                             } catch (Exception e) {
@@ -793,7 +827,7 @@ public class VideoActivity extends AppCompatActivity {
                                                         {
                                                             e.printStackTrace();
                                                         }
-                                                        Toast.makeText(VideoActivity.this, "لطفا مجددا تلاش کنید ، در صورت مشاهده مجدد این پیام مشکل در سرور به وجود آمده است.", Toast.LENGTH_LONG).show();
+                                                        Toast.makeText(VideoActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                                     }
                                                 });
                                             }
@@ -810,7 +844,7 @@ public class VideoActivity extends AppCompatActivity {
                                                         {
                                                             e.printStackTrace();
                                                         }
-                                                        Toast.makeText(VideoActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_SHORT).show();
+                                                        Toast.makeText(VideoActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_SHORT).show();
                                                     }
                                                 });
                                             }catch (Exception e)
@@ -906,7 +940,7 @@ public class VideoActivity extends AppCompatActivity {
                                                 {
                                                     e.printStackTrace();
                                                 }
-                                                Toast.makeText(VideoActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(VideoActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_SHORT).show();
                                             }
                                         });
                                     }
@@ -965,7 +999,7 @@ public class VideoActivity extends AppCompatActivity {
                                                                 }
                                                                 else if (result==-1)
                                                                 {
-                                                                    Toast.makeText(VideoActivity.this, "لطفا مجددا تلاش کنید ، در صورت مشاهده مجدد این پیام فعلا ویدیوها تمام شده است.", Toast.LENGTH_LONG).show();
+                                                                    Toast.makeText(VideoActivity.this, "خطا در ویدیو ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                                                 }
 
                                                             } catch (Exception e) {
@@ -990,7 +1024,7 @@ public class VideoActivity extends AppCompatActivity {
                                                         {
                                                             e.printStackTrace();
                                                         }
-                                                        Toast.makeText(VideoActivity.this, "لطفا مجددا تلاش کنید ، در صورت مشاهده مجدد این پیام مشکل در سرور به وجود آمده است.", Toast.LENGTH_LONG).show();
+                                                        Toast.makeText(VideoActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                                     }
                                                 });
                                             }
@@ -1007,7 +1041,7 @@ public class VideoActivity extends AppCompatActivity {
                                                         {
                                                             e.printStackTrace();
                                                         }
-                                                        Toast.makeText(VideoActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_SHORT).show();
+                                                        Toast.makeText(VideoActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_SHORT).show();
                                                     }
                                                 });
                                             }catch (Exception e)
@@ -1426,7 +1460,7 @@ public class VideoActivity extends AppCompatActivity {
                                 runOnUiThread(new Runnable() {
                                     public void run() {
 
-                                        Toast.makeText(VideoActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(VideoActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_SHORT).show();
                                     }
                                 });
                             }
@@ -1598,7 +1632,7 @@ public class VideoActivity extends AppCompatActivity {
                                 runOnUiThread(new Runnable() {
                                     public void run() {
 
-                                        Toast.makeText(VideoActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(VideoActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_SHORT).show();
                                     }
                                 });
                             }
@@ -1933,7 +1967,7 @@ public class VideoActivity extends AppCompatActivity {
                             {
                                 el.printStackTrace();
                             }
-                            Toast.makeText(VideoActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(VideoActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_SHORT).show();
                         }
                         @Override
                         public void onResponse(Call call, Response response) throws IOException {

@@ -213,7 +213,7 @@ public class CheckOutActivity extends AppCompatActivity {
         final Animation SlideCloseMoney= AnimationUtils.loadAnimation(this,R.anim.slide_close_money);
         final Animation SlideCloseMoneyFirst= AnimationUtils.loadAnimation(this,R.anim.slide_close_money_first);
 
-        bottomNavigationView.setSelectedItemId(R.id.navigation_check_out);
+//        bottomNavigationView.setSelectedItemId(R.id.navigation_check_out);
 
         BottomNavigationMenuView bottomNavigationMenuView = (BottomNavigationMenuView) bottomNavigationView.getChildAt(0);
         View view = bottomNavigationMenuView.getChildAt(1);
@@ -588,7 +588,7 @@ public class CheckOutActivity extends AppCompatActivity {
                                     {
                                         e.printStackTrace();
                                     }
-                                    Toast.makeText(CheckOutActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(CheckOutActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                 }
                             });
                         }
@@ -670,7 +670,7 @@ public class CheckOutActivity extends AppCompatActivity {
                                         {
                                             e.printStackTrace();
                                         }
-                                        Toast.makeText(CheckOutActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(CheckOutActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                     }
                                 });
                             }
@@ -740,7 +740,7 @@ public class CheckOutActivity extends AppCompatActivity {
                                     {
                                         e.printStackTrace();
                                     }
-                                    Toast.makeText(CheckOutActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(CheckOutActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                 }
                             });
                         }
@@ -804,7 +804,7 @@ public class CheckOutActivity extends AppCompatActivity {
                                         {
                                             e.printStackTrace();
                                         }
-                                        Toast.makeText(CheckOutActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(CheckOutActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                     }
                                 });
                             }

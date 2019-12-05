@@ -26,8 +26,8 @@
             android:background="@drawable/title_bg"
             android:gravity="top|center"
             android:shadowColor="#000000"
-            android:shadowDx="1"
-            android:shadowDy="1"
+            android:shadowDx="5"
+            android:shadowDy="2"
             android:shadowRadius="5"
             android:text="پخش ویدئو"
             android:textColor="#2FEF6F"
@@ -63,40 +63,110 @@
     </android.support.constraint.ConstraintLayout>
 
 
+    <TextView
+        android:id="@+id/TextViewVideoExplainPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="پخش ویدیو هر روز ساعت ۱۸ تا ۱۹"
+        android:textAlignment="center"
+        android:textColor="@color/TextColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/PlayeVideoImage"
+        app:layout_constraintEnd_toEndOf="@+id/PlayeVideoImage"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/PlayeVideoImage"
+        app:layout_constraintTop_toBottomOf="@+id/ConstraintVideo" />
+
+
     <ImageView
         android:id="@+id/PlayeVideoImage"
         android:layout_width="169dp"
         android:layout_height="179dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:background="@color/Transparent"
         android:src="@drawable/video"
         app:layout_constraintBottom_toTopOf="@+id/TextViewVideoExplain"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/TextViewVideoExplain"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/CashButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ConstraintVideo" />
+        app:layout_constraintStart_toStartOf="@+id/TextViewVideoExplain"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewVideoExplainPlay" />
 
     <TextView
         android:id="@+id/TextViewVideoExplain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="20dp"
         android:gravity="center"
-        android:text="برای دیدن ویدیو روی آیکون بالا کلیک کنید"
+        android:text="برای دیدن ویدیو روی دکمه بالا کلیک کنید"
         android:textAlignment="center"
         android:textColor="@color/TextColor"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/TextViewVideoExplainFollow"
+        app:layout_constraintEnd_toEndOf="@+id/TextViewVideoExplainFollow"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/TextViewVideoExplainFollow"
+        app:layout_constraintTop_toBottomOf="@+id/PlayeVideoImage" />
+
+    <TextView
+        android:id="@+id/TextViewVideoExplainFollow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="برای اینکه بدونید برنده شدید یا نه، حتما ما رو فالو کنید"
+        android:textAlignment="center"
+        android:textColor="@color/TextColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/LinearLayoutInstaClick"
+        app:layout_constraintEnd_toEndOf="@+id/LinearLayoutInstaClick"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/LinearLayoutInstaClick"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewVideoExplain" />
+
+    <LinearLayout
+        android:id="@+id/LinearLayoutInstaClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:padding="5dp"
+        android:background="@drawable/white_around_bg"
+        android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LinearVideo" />
+        app:layout_constraintTop_toBottomOf="@+id/TextViewVideoExplainFollow">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/instagram_video"/>
+
+        <TextView
+            android:id="@+id/TextViewInstaClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:paddingBottom="5dp"
+            android:text="بزنید اینجا"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/LinearVideo"
@@ -187,7 +257,7 @@
 
     <Button
         android:id="@+id/CashButton"
-        android:layout_width="40dp"
+        android:layout_width="45dp"
         android:layout_height="60dp"
         android:layout_marginEnd="60dp"
         android:layout_marginBottom="20dp"
@@ -195,10 +265,10 @@
         android:elevation="10dp"
         android:gravity="center"
         android:padding="1dp"
-        android:text="موجودی"
+        android:text="امتیاز"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="12sp"
+        android:textColor="#000000"
+        android:textSize="13sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/MessageButton"
         app:layout_constraintEnd_toEndOf="parent"
@@ -258,7 +328,7 @@
 
     <Button
         android:id="@+id/MessageButton"
-        android:layout_width="40dp"
+        android:layout_width="45dp"
         android:layout_height="60dp"
         android:layout_marginEnd="60dp"
         android:background="@drawable/left_button_bg"
@@ -267,15 +337,15 @@
         android:padding="1dp"
         android:text="پیام ها"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="12sp"
+        android:textColor="#000000"
+        android:textSize="13sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/LinearMessage"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.60"/>
+        app:layout_constraintVertical_bias="0.60" />
 
 
     <LinearLayout

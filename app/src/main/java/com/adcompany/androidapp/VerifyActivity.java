@@ -225,7 +225,7 @@ public class VerifyActivity extends AppCompatActivity {
                                                 try {
                                                     if (loading.isShowing())
                                                         loading.dismiss();
-                                                    Toast.makeText(VerifyActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_LONG).show();
+                                                    Toast.makeText(VerifyActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                                 }catch (Exception e)
                                                 {
                                                     e.printStackTrace();
@@ -295,7 +295,7 @@ public class VerifyActivity extends AppCompatActivity {
                                                             try {
                                                                 Toast.makeText(VerifyActivity.this, error, Toast.LENGTH_LONG).show();
                                                             } catch (Exception e) {
-                                                                Toast.makeText(VerifyActivity.this, "لطفا مجددا تلاش کنید ، در صورت مشاهده مجدد این پیام مشکل در سرور به وجود آمده است.", Toast.LENGTH_LONG).show();
+                                                                Toast.makeText(VerifyActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                                             }
                                                         }
                                                     });
@@ -359,7 +359,7 @@ public class VerifyActivity extends AppCompatActivity {
                                                 try {
                                                     if (loading.isShowing())
                                                         loading.dismiss();
-                                                    Toast.makeText(VerifyActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_LONG).show();
+                                                    Toast.makeText(VerifyActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                                 }catch (Exception e)
                                                 {
                                                     e.printStackTrace();
@@ -429,7 +429,7 @@ public class VerifyActivity extends AppCompatActivity {
                                                             try {
                                                                 Toast.makeText(VerifyActivity.this, error, Toast.LENGTH_LONG).show();
                                                             } catch (Exception e) {
-                                                                Toast.makeText(VerifyActivity.this, "لطفا مجددا تلاش کنید ، در صورت مشاهده مجدد این پیام مشکل در سرور به وجود آمده است.", Toast.LENGTH_LONG).show();
+                                                                Toast.makeText(VerifyActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                                             }
                                                         }
                                                     });
@@ -491,7 +491,7 @@ public class VerifyActivity extends AppCompatActivity {
                                                 try {
                                                     if (loading.isShowing())
                                                         loading.dismiss();
-                                                    Toast.makeText(VerifyActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_LONG).show();
+                                                    Toast.makeText(VerifyActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                                 }catch (Exception e)
                                                 {
                                                     e.printStackTrace();
@@ -550,7 +550,7 @@ public class VerifyActivity extends AppCompatActivity {
                                                         public void run() {
                                                             if (loading.isShowing())
                                                                 loading.dismiss();
-                                                            Toast.makeText(VerifyActivity.this, "لطفا مجددا تلاش کنید ، در صورت مشاهده مجدد این پیام مشکل در سرور به وجود آمده است.", Toast.LENGTH_LONG).show();
+                                                            Toast.makeText(VerifyActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                                         }
                                                     });
                                                 }catch (Exception e)
@@ -646,7 +646,7 @@ public class VerifyActivity extends AppCompatActivity {
                                                         }catch (Exception e){
                                                             e.printStackTrace();
                                                         }
-                                                        Toast.makeText(VerifyActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_LONG).show();
+                                                        Toast.makeText(VerifyActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                                     }
                                                 });
                                             }
@@ -795,7 +795,7 @@ public class VerifyActivity extends AppCompatActivity {
                                                         }catch (Exception e){
                                                             e.printStackTrace();
                                                         }
-                                                        Toast.makeText(VerifyActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_LONG).show();
+                                                        Toast.makeText(VerifyActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                                     }
                                                 });
                                             }
@@ -948,7 +948,7 @@ public class VerifyActivity extends AppCompatActivity {
                                                 public void run() {
                                                     if (loading.isShowing())
                                                         loading.dismiss();
-                                                    Toast.makeText(VerifyActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_LONG).show();
+                                                    Toast.makeText(VerifyActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                                 }
                                             });
                                         }

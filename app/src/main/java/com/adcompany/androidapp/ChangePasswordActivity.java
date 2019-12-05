@@ -150,7 +150,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
                                             public void run() {
                                                 if (loading.isShowing())
                                                     loading.dismiss();
-                                                Toast.makeText(ChangePasswordActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_LONG).show();
+                                                Toast.makeText(ChangePasswordActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                             }
                                         });
                                     }
@@ -210,7 +210,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
                                                             try {
                                                                 if (loading.isShowing())
                                                                     loading.dismiss();
-                                                                Toast.makeText(ChangePasswordActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_LONG).show();
+                                                                Toast.makeText(ChangePasswordActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                                             } catch (Exception e) {
                                                                 e.printStackTrace();
                                                             }

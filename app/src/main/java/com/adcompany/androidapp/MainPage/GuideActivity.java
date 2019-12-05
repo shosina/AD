@@ -126,9 +126,21 @@ public class GuideActivity extends AppCompatActivity {
         ImageViewAccount=(ImageView)findViewById(R.id.ImageViewAccount);
         bottomNavigationView.setSelectedItemId(R.id.navigation_guide);
 
-        String text="برای اینکه راحت با برنامه کار کنید و درآمد کسب کنید حتما توضیحات را بخوانید.";
+        String text="برای اینکه راحت بتونید برنده بشید حتما توضیحات زیر رو بخونید :";
         TextViewGuideTitle.setText(text);
-        text="۱. برای کسب درآمد با استفاده از نوار پایین صفحه به صفحه پخش ویدیو بروید، دکمه پخش ویدیو را بزنید و تا انتهای پخش ویدیو صبر کنید."+"\n"+"۲. ما هر روز کلی ویدیو جدید تو برنامه میذاریم که وقتی به تعداد معینی از بازدید می رسند حذف می شوند."+"\n"+"۳. برای دریافت درآمدتان با استفاده از نوار پایین صفحه به بخش تسویه حساب بروید و شماره شبا خود را وارد کنید."+"\n"+"۴. برای دریافت شماره شبا میتوانید به سایت بانک خود مراجعه کنید."+"\n"+"۵. برای دیدن موجودی خود روی دستگیره موجودی در کنار صفحه کلیک کنید."+"\n"+"۶. با استفاده از نوار پایین صفحه به بخش بیلبورد بروید. در آنجا می توانید لیست شرکت های مختلف در زمینه های مختلف را مشاهده کنید و محصول خود را با مقایسه بین آن ها خریداری کنید.";
+        text = "(البته خلاصش اینه که حتما هر روز ساعت ۱۸ تا ۱۹ به آد سر بزنید ولی بقیش رو حتما بخونید)\n" +
+                "\n" +
+                "برنده شدن توی آد خیلی راحته ، هر کی در آخر هفته امتیازش بیشتر باشه برنده میشه\n" +
+                "برای جمع کردن امتیاز فقط کافیه که ویدیو ببینید ،هر ویدیو ۱۰ امتیاز داره و هر روز فقط ۶ تا ویدیو میزاریم اون هم در ساعت ۱۸ تا ۱۹\n" +
+                "هر کی زودتر این ویدیو هارو ببینه امتیازش رو میگیره ولی اگه نتونستید این ویدیو هارو ببینید اصلا نگران نباشید \n" +
+                "چون هر روز یه ویدیو شگفت انگیز داریم که امتیازش از بقیه خیلی بالاتره ولی ساعت نمایشش رو شما باید تشخیص بدید، ولی چجوری؟؟\n" +
+                "بین اون ۶ تا ویدیوی ساعت ۱۸ تا ۱۹ یه ویدیو سوالی هست که همه اونو میبینن که جواب سوال ، ساعتی است که ویدیو شگفت انگیز پخش میشه \n" +
+                "پس باید سوال رو ببینید و ساعت رو حدس بزنید و سر اون ساعت بیاید و ویدیو شگفت انگیز رو ببینید و امتیازش رو بگیرید (سر ساعت بیاید چون فقط تا یه ربع نمایش داده میشه)\n" +
+                "مثلا یه نمونه سوال اینه که رقم اول تعداد گل های ملی علی دایی بعلاوه ۲۰\n" +
+                "خب \n" +
+                "علی دایی ۱۰۹ تا گل ملی داره که رقم اولش میشه ۱ که به علاوه ۲۰ میشه ۲۱\n" +
+                "پس ساعت ۲۱ ویدیو شگفت انگیز پخش میشه \n" +
+                "بقیه سوالات هم همینجوره و البته به نسبت سختی یا راحتی سوال امتیازش کم یا زیاد میشه";
         TextViewGuide.setText(text);
 
         HeaderGuide.setTypeface(font_Extra_Bold);
@@ -204,13 +216,13 @@ public class GuideActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                if (menuItem.getItemId()==R.id.navigation_check_out)
-                {
-                    startActivity(new Intent(getBaseContext(), CheckOutActivity.class));
-                    overridePendingTransition(0, 0);
-                    IsExit = false;
-                    finish();
-                }
+//                if (menuItem.getItemId()==R.id.navigation_check_out)
+//                {
+//                    startActivity(new Intent(getBaseContext(), CheckOutActivity.class));
+//                    overridePendingTransition(0, 0);
+//                    IsExit = false;
+//                    finish();
+//                }
                 if (menuItem.getItemId()==R.id.navigation_video)
                 {
                     startActivity(new Intent(getBaseContext(), VideoActivity.class));

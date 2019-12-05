@@ -186,7 +186,7 @@ public class AdvertisingActivity extends AppCompatActivity {
         bottomNavigationView.setSelectedItemId(R.id.navigation_advertising);
 
         BottomNavigationMenuView bottomNavigationMenuView = (BottomNavigationMenuView) bottomNavigationView.getChildAt(0);
-        View view = bottomNavigationMenuView.getChildAt(4);
+        View view = bottomNavigationMenuView.getChildAt(3);
         view.setBackgroundResource(R.drawable.advertising_bg);
 
         for (int i = 0; i <bottomNavigationView.getMenu().size(); i++) {
@@ -206,13 +206,13 @@ public class AdvertisingActivity extends AppCompatActivity {
                     IsExit=false;
                     finish();
                 }
-                if (menuItem.getItemId()==R.id.navigation_check_out)
-                {
-                    startActivity(new Intent(getBaseContext(), CheckOutActivity.class));
-                    overridePendingTransition(0, 0);
-                    IsExit=false;
-                    finish();
-                }
+//                if (menuItem.getItemId()==R.id.navigation_check_out)
+//                {
+//                    startActivity(new Intent(getBaseContext(), CheckOutActivity.class));
+//                    overridePendingTransition(0, 0);
+//                    IsExit=false;
+//                    finish();
+//                }
                 if (menuItem.getItemId()==R.id.navigation_video)
                 {
                     startActivity(new Intent(getBaseContext(), VideoActivity.class));
@@ -233,7 +233,7 @@ public class AdvertisingActivity extends AppCompatActivity {
             }
         });
 
-        String text="هدف مجموعه ما کمک به برندسازی و شناساندن کسب و کارهای ایرانی به مخاطبان با تبلیغاتی پر بازده و در عین حال ارزان است. تمام تلاش مجموعه در جهت افزایش کیفیت تبلیغات از طریق روش های مختلف از جمله دادن درآمد به بینندگان می\u200Cباشد که البته این توزیع درآمد بین بینندگان بدین جهت است که به ازای زمانی که از آنها برای دیدن تبلیغات گرفته می\u200Cشود باید منفعتی هم به آنان برسد تا تبلیغات عادلانه باشد و این عدالت ،تاثیر و بازده تبلیغات را چندین برابر می\u200Cنماید .";
+        String text = "هدف مجموعه ما کمک به برند سازی و شناساندن کسب و کارهای ایرانی به مخاطبان با تبلیغاتی پربازده و در عین حال به صرفه و ارزان است . تمام تلاش مجموعه در جهت افزایش کیفیت تبلیغات با ایجاد محیطی جذاب و پرهیجان و تاثیرگذار در اپلیکیشن آد است .";
         TextViewAdvertising.setText(text);
 
         OrderAdvertisingButton.setOnClickListener(new View.OnClickListener() {

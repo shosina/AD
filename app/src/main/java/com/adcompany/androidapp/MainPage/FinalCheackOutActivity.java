@@ -195,7 +195,7 @@ public class FinalCheackOutActivity extends AppCompatActivity {
         final Animation SlideCloseMoney= AnimationUtils.loadAnimation(this,R.anim.slide_close_money);
         final Animation SlideCloseMoneyFirst= AnimationUtils.loadAnimation(this,R.anim.slide_close_money_first);
 
-        bottomNavigationView.setSelectedItemId(R.id.navigation_check_out);
+//        bottomNavigationView.setSelectedItemId(R.id.navigation_check_out);
 
         for (int i = 0; i <bottomNavigationView.getMenu().size(); i++) {
             MenuItem menuItem = bottomNavigationView.getMenu().getItem(i);
@@ -429,7 +429,7 @@ public class FinalCheackOutActivity extends AppCompatActivity {
                                                 {
                                                     e.printStackTrace();
                                                 }
-                                                Toast.makeText(FinalCheackOutActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_LONG).show();
+                                                Toast.makeText(FinalCheackOutActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                             }
                                         });
                                     }
@@ -583,7 +583,7 @@ public class FinalCheackOutActivity extends AppCompatActivity {
                                     {
                                         e.printStackTrace();
                                     }
-                                    Toast.makeText(FinalCheackOutActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(FinalCheackOutActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                 }
                             });
                         }
@@ -731,7 +731,7 @@ public class FinalCheackOutActivity extends AppCompatActivity {
                                     {
                                         e.printStackTrace();
                                     }
-                                    Toast.makeText(FinalCheackOutActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(FinalCheackOutActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                 }
                             });
                         }

@@ -201,7 +201,7 @@ public class ListActivity extends AppCompatActivity {
         }
 
         BottomNavigationMenuView bottomNavigationMenuView = (BottomNavigationMenuView) bottomNavigationView.getChildAt(0);
-        View view = bottomNavigationMenuView.getChildAt(3);
+        View view = bottomNavigationMenuView.getChildAt(2);
 
         view.setBackgroundResource(R.drawable.list_bg);
 
@@ -215,12 +215,12 @@ public class ListActivity extends AppCompatActivity {
                     overridePendingTransition(0, 0);
                     IsExit = false;
                 }
-                if (menuItem.getItemId()==R.id.navigation_check_out)
-                {
-                    startActivity(new Intent(getBaseContext(), CheckOutActivity.class));
-                    overridePendingTransition(0, 0);
-                    IsExit = false;
-                }
+//                if (menuItem.getItemId()==R.id.navigation_check_out)
+//                {
+//                    startActivity(new Intent(getBaseContext(), CheckOutActivity.class));
+//                    overridePendingTransition(0, 0);
+//                    IsExit = false;
+//                }
                 if (menuItem.getItemId()==R.id.navigation_video)
                 {
                     startActivity(new Intent(getBaseContext(), VideoActivity.class));
@@ -390,7 +390,7 @@ public class ListActivity extends AppCompatActivity {
                                     {
                                         e.printStackTrace();
                                     }
-                                    Toast.makeText(ListActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(ListActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                 }
                             });
                         }
@@ -632,7 +632,7 @@ public class ListActivity extends AppCompatActivity {
                                     {
                                         e.printStackTrace();
                                     }
-                                    Toast.makeText(ListActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(ListActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                 }
                             });
                         }
@@ -777,7 +777,7 @@ public class ListActivity extends AppCompatActivity {
                                                                                                     {
                                                                                                         e.printStackTrace();
                                                                                                     }
-                                                                                                    Toast.makeText(ListActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_LONG).show();
+                                                                                                    Toast.makeText(ListActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                                                                                 }
                                                                                             });
                                                                                         }

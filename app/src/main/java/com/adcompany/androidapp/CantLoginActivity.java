@@ -186,7 +186,7 @@ public class CantLoginActivity extends AppCompatActivity {
                                                 }catch (Exception e){
                                                     e.printStackTrace();
                                                 }
-                                                Toast.makeText(CantLoginActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_LONG).show();
+                                                Toast.makeText(CantLoginActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                             }
                                         });
                                     }

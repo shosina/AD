@@ -4,9 +4,9 @@
     <item android:id="@+id/navigation_guide"
         android:icon="@drawable/guide"
         android:title="راهنما"/>
-    <item android:id="@+id/navigation_check_out"
-        android:icon="@drawable/check_out"
-        android:title="تسویه حساب"/>
+<!--    <item android:id="@+id/navigation_check_out"-->
+<!--        android:icon="@drawable/check_out"-->
+<!--        android:title="تسویه حساب"/>-->
     <item android:id="@+id/navigation_video"
         android:icon="@drawable/video"
         android:title="پخش ویدئو"/>

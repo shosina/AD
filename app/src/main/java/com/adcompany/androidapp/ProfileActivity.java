@@ -171,7 +171,7 @@ public class ProfileActivity extends AppCompatActivity {
                                     public void run() {
                                         if (loading.isShowing())
                                             loading.dismiss();
-                                        Toast.makeText(ProfileActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(ProfileActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                     }
                                 });
                             }
@@ -335,7 +335,7 @@ public class ProfileActivity extends AppCompatActivity {
                                 public void run() {
                                     if (loading.isShowing())
                                         loading.dismiss();
-                                    Toast.makeText(ProfileActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(ProfileActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                 }
                             });
                         }
@@ -458,7 +458,7 @@ public class ProfileActivity extends AppCompatActivity {
                                         public void run() {
                                             if (loading.isShowing())
                                                 loading.dismiss();
-                                            Toast.makeText(ProfileActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_LONG).show();
+                                            Toast.makeText(ProfileActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                         }
                                     });
                                 }
@@ -633,7 +633,7 @@ public class ProfileActivity extends AppCompatActivity {
                                             public void run() {
                                                 if (loading.isShowing())
                                                     loading.dismiss();
-                                                Toast.makeText(ProfileActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_LONG).show();
+                                                Toast.makeText(ProfileActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                             }
                                         });
                                     }
@@ -699,7 +699,7 @@ public class ProfileActivity extends AppCompatActivity {
                                                                                         public void run() {
                                                                                             if (loading.isShowing())
                                                                                                 loading.dismiss();
-                                                                                            Toast.makeText(ProfileActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_LONG).show();
+                                                                                            Toast.makeText(ProfileActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                                                                         }
                                                                                     });
                                                                                 }
@@ -941,7 +941,7 @@ public class ProfileActivity extends AppCompatActivity {
                             {
                                 el.printStackTrace();
                             }
-                            Toast.makeText(ProfileActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(ProfileActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                         }
                         @Override
                         public void onResponse(Call call, Response response) throws IOException {

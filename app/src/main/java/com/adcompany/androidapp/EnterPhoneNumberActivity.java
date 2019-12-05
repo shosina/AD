@@ -187,7 +187,7 @@ public class EnterPhoneNumberActivity extends AppCompatActivity {
                                                     }catch (Exception e){
                                                         e.printStackTrace();
                                                     }
-                                                    Toast.makeText(EnterPhoneNumberActivity.this, "اتصال با مشکل مواجه شد.", Toast.LENGTH_LONG).show();
+                                                    Toast.makeText(EnterPhoneNumberActivity.this, "خطا در ارتباط ، لطفا دوباره تلاش کنید.", Toast.LENGTH_LONG).show();
                                                 }
                                             });
                                         }
