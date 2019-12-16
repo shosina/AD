@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.adcompany.androidapp">
+    package="com.adgameampo.androidapp">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -11,7 +11,6 @@
     <uses-permission android:name="android.permission.Wake_Lock"/>
     <uses-permission android:name="android.permission.ReceiveBootCompleted"/>
     <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
@@ -27,7 +26,7 @@
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <meta-data android:name="co.ronash.pushe.token" android:value="PUSHE_291105597001"/>
+        <meta-data android:name="co.ronash.pushe.token" android:value="PUSHE_409386626384"/>
 
         <service
             android:name=".MyPushListener"

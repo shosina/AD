@@ -70,51 +70,71 @@
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/shadow_white_big_bg"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_view"
+        app:layout_constraintBottom_toTopOf="@+id/SMSNumberButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/CashButton"
         app:layout_constraintTop_toBottomOf="@+id/ConstraintGuide">
 
         <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <com.uncopt.android.widget.text.justify.JustifiedTextView
-            android:id="@+id/TextViewGuideTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="top|right"
-            android:lineSpacingExtra="7dp"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"
-            android:paddingTop="5dp"
-            android:textAlignment="center"
-            android:textColor="#e34c5e"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            tools:ignore="RtlHardcoded" />
+            android:orientation="vertical">
 
-        <com.uncopt.android.widget.text.justify.JustifiedTextView
-            android:id="@+id/TextViewGuide"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="top|right"
-            android:lineSpacingExtra="7dp"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="20dp"
-            android:textAlignment="center"
-            android:textColor="@color/TextColor"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            tools:ignore="RtlHardcoded" />
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
+                android:id="@+id/TextViewGuideTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|right"
+                android:lineSpacingExtra="7dp"
+                android:paddingStart="12dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="12dp"
+                android:textAlignment="center"
+                android:textColor="#e34c5e"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="RtlHardcoded" />
+
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
+                android:id="@+id/TextViewGuide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|right"
+                android:lineSpacingExtra="7dp"
+                android:paddingStart="12dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="20dp"
+                android:textAlignment="center"
+                android:textColor="@color/TextColor"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="RtlHardcoded" />
 
 
-    </LinearLayout>
+        </LinearLayout>
 
     </ScrollView>
+
+    <Button
+        android:id="@+id/SMSNumberButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/shadow_white_bg"
+        android:gravity="center"
+        android:paddingStart="12dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="20dp"
+        android:text="شماره پیامکی"
+        android:textAlignment="center"
+        android:textColor="@color/TextColor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
     <android.support.design.widget.BottomNavigationView
